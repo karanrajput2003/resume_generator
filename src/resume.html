@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color:lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background-color: #fff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+}
+
+.container .left_Side{
+    position: relative;
+    background-color: #003147;
+    padding: 40px;
+}
+
+.profileText{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(255, 255, 255,0.2);
+}
+
+.profileText h2{
+    color: #fff;
+    font-size: 1.5 em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.profileText h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.contactInfo{
+    padding-top: 40px;
+}
+
+.title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contactInfo ul {
+    position: relative;
+
+}
+
+.contactInfo ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    
+}
+
+.contactInfo ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+.contactInfo ul li span{
+    color: #fff;
+    font-weight: 300;
+}
+
+.contactInfo.education li{
+    margin-bottom: 15px;
+}
+
+.contactInfo.education h5{
+    color: #03a9f4;
+    font-weight: 500;
+}
+
+.contactInfo.education h4:nth-child(2){
+    color: #fff;
+    font-weight: 500;
+}
+.contactInfo.education h4{
+    color: #fff;
+    font-weight: 300;
+}
+
+.container .right_Side{
+    position: relative;
+    background-color: #fff;
+    padding: 40px;    
+}
+
+.about{
+    margin-bottom: 50px;
+}
+.title2{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px
+}
+p{
+    color: #333;
+}
+
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.about .box .year_company{
+    min-width: 150px;
+}
+
+.about .box .year_company h5{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+
+.about .box .text h4{
+    text-transform: uppercase;
+    color: #003147;
+    font-size: 16px;
+    font-weight: 500;
+}
+.skills .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills .box h4{
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+
+}
+.skills1{
+    margin-top: 0;
+}
+
+@media all and (max-width: 780px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .about .box{
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+    }
+  }
+    </style>
+</head>
+<body>
+    
+    <div class="container" id="container">
+        <div class="left_Side">
+            <div class="profileText">
+                <h2><span id="name"></span> <br><span class="desgi" id="desgination">Web Developer</span></h2>
+            </div>
+            <div class="contactInfo">
+                <h3 class="title">Contact Info</h3>
+                <ul>
+                    <li>
+                        <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <span class="text" id="contact">8655634653</span>
+
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                        <span class="text" id="email">karan@gmail.com</span>
+
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                        <span class="text" id="website">website</span>
+
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                        <span class="text" id="linkedin">linkedIn</span>
+
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span class="text">India</span>
+
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contactInfo education">
+                <h3 class="title">Education</h3>
+                <ul>
+                    <li>
+                        <h4 id="gcollege">College Name</h4>
+                        <h5 id="gduration" >2022-2023</h5>
+                        <h4 id="glocation" >Msc</h4>
+                    </li>
+                    <li>
+                        <h4 id="twcollege">College Name</h4>
+                        <h5 id="twduration" >2022-2023</h5>
+                        <h4 id="twlocation" >Msc</h4>
+                    </li>
+                    <li>
+                        <h4 id="tecollege">College Name</h4>
+                        <h5 id="teduration" >2022-2023</h5>
+                        <h4 id="telocation" >Msc</h4>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="contactInfo skills1"></div>
+            <h3 class="title skills">Skills</h3>
+        </div>
+
+
+        
+        <div class="right_Side">
+            <div class="about">
+                <h2 class="title2">Profile</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim doloribus necessitatibus sapiente, odio magni debitis doloremque, ipsam ex laborum, dolore quasi hic veritatis odit adipisci fugit. Et libero perferendis reprehenderit.</p>
+            </div>
+            <div class="about">
+                <h2 class="title2">Experience</h2>
+                <div class="box">
+                    <div class="year_company">
+                        <h5 id="fduration">2019 - Present</h5>
+                        <h5 id="fcompany">Company Name</h5>
+                    </div>
+                    <div class="text">
+                        <h4 id="fdesgination">Desgination</h4>
+                        <p id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim doloribus necessitatibus sapiente, odio magni debitis doloremque, ipsam ex laboru</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="year_company">
+                        <h5 id="duration2">2016 - 2019</h5>
+                        <h5 id="company2">Company Name</h5>
+                    </div>
+                    <div class="text">
+                        <h4 id="desgination2">Desgination</h4>
+                        <p id="description2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim doloribus necessitatibus sapiente, odio magni debitis doloremque, ipsam ex laboru</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="year_company">
+                        <h5 id="duration3">2016 - 2019</h5>
+                        <h5 id="company3">Company Name</h5>
+                    </div>
+                    <div class="text">
+                        <h4 id="desgination3">Desgination</h4>
+                        <p id="description3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim doloribus necessitatibus sapiente, odio magni debitis doloremque, ipsam ex laboru</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about skills">
+                <h2 class="title2">Project</h2>
+                <div class="box">
+                    <div class="year_company">
+                        <h5 id="projectduration1">2016 - 2019</h5>
+                    </div>
+                    <div class="text">
+                        <h4 id="project1">Project Name</h4>
+                        <p id="projectdescription1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim doloribus necessitatibus sapiente, odio magni debitis doloremque, ipsam ex laboru</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="year_company">
+                        <h5 id="projectduration2">2016 - 2019</h5>
+                    </div>
+                    <div class="text">
+                        <h4 id="project2">Project Name</h4>
+                        <p id="projectdescription1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim doloribus necessitatibus sapiente, odio magni debitis doloremque, ipsam ex laboru</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button onclick="generatepdf()">Download</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/temp.js"></script>
+</body>
+</html>

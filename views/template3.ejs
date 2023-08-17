@@ -1,0 +1,329 @@
+<link rel="icon" href="images/icons8-cv-16.png" type='images/x-icon'>
+      <title>RESUME GENERATOR</title>
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font LineAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+
+<style>
+
+    /*Var*/
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    
+ }
+.uni{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+#container {
+  max-width: 1000px;
+  min-height: 1000px;
+  background-color: azure;
+}    
+  body, html {
+    font-size: 14px;
+    color: #2A2A2A;
+    font-family: 'Poppins', sans-serif; }
+  
+  .box-cv-wrapper {
+    display: flex;
+    min-height: 100%;
+    box-shadow: black;
+   }
+  
+  .box-sidebar {
+    width: 400px;
+    background-color: #144E52;
+    color: #fff;
+    padding: 3rem 2rem; }
+    .box-sidebar .avatar {
+      margin-bottom: 2rem; }
+      .box-sidebar .avatar img {
+        width: 10rem;
+        height: 10rem; }
+    .box-sidebar .userinfo {
+      margin-bottom: 2rem; }
+      .box-sidebar .userinfo .username {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        font-size: 2rem; }
+    .box-sidebar .contact-info {
+      margin-bottom: 2rem; }
+      .box-sidebar .contact-info .item {
+        display: block;
+        margin-bottom: 1rem;
+        padding: 0.5rem 1rem;
+        background-color: #e5e5e5;
+        color: #233A5F;
+        border-radius: 4px; }
+    .box-sidebar .list {
+      margin-left: 20px; }
+      .box-sidebar .list li {
+        margin-bottom: 1rem; }
+    .box-sidebar .flex-box.honor {
+      margin-bottom: 1rem; }
+    .box-sidebar .desc {
+      opacity: 0.6; }
+    .box-sidebar .social-list {
+      text-align: center; }
+      .box-sidebar .social-list a {
+        display: inline-block;
+        margin: 0px 5px;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+        transition: transform 0.3s ease; }
+        .box-sidebar .social-list a:hover {
+          transition: transform 0.3s ease;
+          transform: scale(1.1); }
+  
+  .box-content {
+    margin-left: 2rem;
+    flex: 1;
+    padding: 2rem; }
+    .box-content .main-title {
+      position: relative;
+      color: #233A5F;
+      padding-bottom: 0.2rem; }
+      .box-content .main-title:before {
+        width: 70px;
+        content: "";
+        height: 3px;
+        position: absolute;
+        bottom: 0px;
+        background-color: #233A5F; }
+  
+  .main-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600; }
+  
+  .main-desc {
+    color: #878787; }
+  
+  .box {
+    margin-bottom: 2rem; }
+  
+  .flex-box {
+    display: flex;
+    justify-content: space-between; }
+    .flex-box .date {
+      white-space: nowrap; }
+    .flex-box .content {
+      flex: 1;
+      margin-left: 2rem;
+      padding-left: 20px;
+      position: relative; }
+      .flex-box .content:before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        top: 10px;
+        left: 0px;
+        background-color: #e5e5e5; }
+    .flex-box .name {
+      margin: 0.5rem 0px;
+      font-weight: 600; }
+    .flex-box .logo {
+      width: 4rem; }
+      .flex-box .logo img {
+        width: 100%; }
+    .flex-box .name-company {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem; }
+    .flex-box .pos {
+      margin-bottom: 1rem; }
+    .flex-box.-education .pos {
+      font-size: 1.2rem; }
+  
+  /*Responsive*/
+  @media (max-width: 991px) {
+    .box-sidebar {
+      width: 320px; } }
+  
+  @media (max-width: 768px) {
+    .box-cv-wrapper {
+      display: block; }
+    .box-sidebar {
+      width: 100%; }
+    .box-content {
+      margin-left: 0px; } }
+  
+  @media (max-width: 420px) {
+    .flex-box {
+      display: block; }
+    .flex-box .content {
+      margin-left: 0px;
+      margin-top: 1rem; }
+    .box-content .box {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #e0e0e0; } }
+</style>
+<div class="uni">
+<div class="box-cv-wrapper" id="container">
+    <div class="box-sidebar">
+        <div class="avatar">
+            <img src="img/avatar.png" alt="">
+        </div>
+        <div class="userinfo">
+            <div class="username"><%= foundUser.formData.name %></div>
+            <div class="post"><%= foundUser.formData.designation %></div>
+        </div>
+        <div class="contact-info">
+          <div class="item">
+            <i class="fa fa-phone"></i>
+              <%= foundUser.formData.contact %>
+          </div>
+          <div class="item">
+            <i class="fa fa-envelope"></i>
+              <%= foundUser.formData.email %>
+          </div>
+            <div class="item">
+              <i class="fa fa-linkedin"></i>
+                <%=foundUser.formData.linkedin %>
+            </div>
+            <div class="item">
+              <i class="fa fa-map-marker"></i>
+                <%= foundUser.formData.address %>
+            </div>
+        </div>
+        <div class="box">
+          <div class="main-title">Education</div>
+          <div class="flex-box -education">
+              <div class="date"><%= foundUser.edudata.gduration %></div>
+              <div class="content">
+                  <div class="pos"><%= foundUser.edudata.gcollege %></div>
+                  <div class="name"><%= foundUser.edudata.glocation %></div>
+                  
+              </div>
+          </div>
+          <div class="flex-box -education">
+            <div class="date"><%= foundUser.edudata.twduration %></div>
+            <div class="content">
+                <div class="pos"><%= foundUser.edudata.twcollege %></div>
+                <div class="name"><%= foundUser.edudata.twlocation %></div>
+                
+            </div>
+        </div>
+        <div class="flex-box -education">
+          <div class="date"><%= foundUser.edudata.teduration %></div>
+          <div class="content">
+              <div class="pos"><%= foundUser.edudata.tecollege %></div>
+              <div class="name" style="padding-top:-10px;"><%= foundUser.edudata.telocation %></div>
+              
+          </div>
+      </div>
+      </div>
+        <div class="box">
+            <div class="main-title">Skills</div>
+              <div class="des" style="font-size: 25px;">
+                <%= foundUser.projectinfo.skillsdescription %>
+              </div>
+               
+        </div>
+        
+    </div>
+    <div class="box-content">
+        <div class="box">
+            <div class="main-title">About</div>
+            <div class="main-desc" style="padding-bottom: 25px;">
+                <%= foundUser.formData.introduction %>
+            </div>
+            
+        <div class="main-title">Experience</div>
+        <div class="box">
+            <div class="flex-box -exp">
+                <!-- <div class="logo">
+                    <img src="img/logos/logo1.png" alt="">
+                </div> -->
+                <div class="content">
+                    <div class="name-company"><%= foundUser.workexp.fcompany %></div>
+                    <div class="pos"><%= foundUser.workexp.fdesignation %> | <%= foundUser.workexp.fduration %></div>
+                    <div class="main-desc">
+                      <%= foundUser.workexp.fdescription %>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="flex-box -exp">
+                <!-- <div class="logo">
+                    <img src="img/logos/logo2.png" alt="">
+                </div> -->
+                <div class="content">
+                    <div class="name-company"><%= foundUser.workexp.company2 %></div>
+                    <div class="pos"><%= foundUser.workexp.designation2 %> | <%= foundUser.workexp.duration2 %></div>
+                    <div class="main-desc">
+                      <%= foundUser.workexp.description2 %>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="flex-box -exp">
+                <!-- <div class="logo">
+                    <img src="img/logos/logo3.png" alt="">
+                </div> -->
+                <div class="content">
+                    <div class="name-company"><%= foundUser.workexp.company3 %></div>
+                    <div class="pos"><%= foundUser.workexp.designation3 %> | <%= foundUser.workexp.duration3 %></div>
+                    <div class="main-desc">
+                      <%= foundUser.workexp.description3 %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="main-title">Project</div>
+        <div class="box">
+            <div class="flex-box -exp">
+                <!-- <div class="logo">
+                    <img src="img/logos/logo1.png" alt="">
+                </div> -->
+                <div class="content">
+                    <div class="name-company"><%= foundUser.projectinfo.project1 %></div>
+                    <div class="pos"><%= foundUser.projectinfo.projectduration1 %></div>
+                    <div class="main-desc">
+                      <%= foundUser.projectinfo.projectdescription1 %>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="flex-box -exp">
+                <!-- <div class="logo">
+                    <img src="img/logos/logo2.png" alt="">
+                </div> -->
+                <div class="content">
+                    <div class="name-company"><%= foundUser.projectinfo.project2 %></div>
+                    <div class="pos"><%= foundUser.projectinfo.projectduration2 %></div>
+                    <div class="main-desc">
+                      <%= foundUser.projectinfo.projectdescription2 %>   
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+  </div>
+</div>
+</div>
+<button onclick="generatepdf()">Download</button>
+<script src="js/temp.js">
+   
+</script>

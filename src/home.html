@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="imagee/icons8-cv-16.png" type='images/x-icon'>
+   <title>RESUME GENERATOR</title>
+   
+
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&display=swap');
+
+:root{
+   --main-color:#be9c79;
+   /* --main-color:#ffeba7; */
+
+   --black:#333;
+   --white:#fff;
+   --light-color:#666;
+   --border:.2rem solid var(--black);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+   font-family: 'Nunito', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   text-transform: capitalize;
+}
+
+*::selection{
+   background-color: var(--main-color);
+   color:var(--white);
+}
+
+::-webkit-scrollbar{
+   height: .5rem;
+   width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+   background-color: var(--main-color);
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 6.5rem;
+}
+
+section{
+   padding:3rem 2rem;
+   max-width: 1200px;
+   margin:0 auto;
+}
+
+.heading{
+   text-align: center;
+   margin-bottom: 3rem;
+}
+
+.heading img{
+   height: 4rem;
+   margin-bottom: 1rem;
+}
+
+.heading h3{
+   font-size:4rem;
+   color:var(--black);
+   font-family: 'Merienda One', cursive;
+}
+
+.btn{
+   display: inline-block;
+   margin-top: 1rem;
+   background-color: var(--main-color);
+   cursor: pointer;
+   color:var(--white);
+   font-size: 1.8rem;
+   padding:1rem 3rem;
+}
+
+.btn:hover{
+   background-color: var(--black);
+}
+
+.header{
+   position: sticky;
+   top:0; left: 0; right:0;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   z-index: 1000;
+}
+
+.header .flex{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+   padding:1.5rem 2rem;
+}
+
+.header .flex .logo img{
+   height: 4.5rem;
+}
+
+.header .flex .navbar a{
+   margin-left: 2rem;
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.header .flex .navbar a:hover{
+   text-decoration: underline;
+   color:var(--main-color);
+}
+
+#menu-btn{
+   display: none;
+   font-size: 2.5rem;
+   color:var(--black);
+   cursor: pointer;
+}
+
+.home-bg{
+   /* background:linear-gradient(90deg, var(--white), transparent 70%), url(../images/home-bg.jpg) no-repeat; */
+   background-size: cover;
+   background-position: center;
+}
+
+.home-bg .home{
+   min-height: 70rem;
+   display: flex;
+   align-items: center;
+}
+
+.home-bg .home .content{
+   width: 50rem;
+   text-align: center;
+}
+
+.home-bg .home .content h3{
+   font-size: 6rem;
+   color:var(--black);
+   font-family: 'Merienda One', cursive;
+}
+
+.home-bg .home .content p{
+   padding:1rem 0;
+   font-size: 2rem;
+   color:var(--black);
+   line-height: 2;
+}
+
+.about{
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap:4rem;
+}
+
+.about .image{
+   flex:1 1 40rem;
+}
+
+.about .image img{
+   width: 100%;
+}
+
+.about .content{
+   flex:1 1 40rem;
+}
+
+.about .content h3{
+   font-size: 4.5rem;
+   color:var(--black);
+   font-family: 'Merienda One', cursive;
+   padding-bottom: 1rem;
+}
+
+.about .content p{
+   padding:1rem 0;
+   line-height: 2;
+   color:var(--light-color);
+   font-size: 2rem;
+   display: flex;
+   align-items: left;
+}
+
+.profession .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+   gap:1.5rem;
+   align-items: flex-start;
+}
+
+.profession .box-container .box{
+   text-align: center;
+}
+
+
+.profession .box-container .box img{
+   height: 80%;
+   width: 80%;
+   margin-bottom: .5rem;
+}
+
+.profession .box-container .box h3{
+   font-size: 3rem;
+   color:var(--black);
+   margin:1rem 0;
+}
+
+.profession .box-container .box p{
+   line-height: 2;
+   font-size: 1.5rem;
+   color:var(--light-color);
+}
+
+.menu .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 50rem);
+   gap:2rem;
+   align-items: flex-start;
+   justify-content: center;
+}
+
+.menu .box-container .box{
+   text-align: center;
+}
+
+.menu .box-container .box img{
+   margin-bottom: 1rem;
+}
+.menu .box-container .box h1{
+   font-size: 3rem;
+   color:var(--black);
+}
+
+
+.menu .box-container .box h3{
+   font-size: 1.5rem;
+   color:var(--black);
+}
+
+.gallery .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 33rem);
+   gap:1.5rem;
+   justify-content: center;
+}
+
+.gallery .box-container img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+
+.team .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 33rem);
+   gap:1.5rem;
+   justify-content: center;
+}
+
+.team .box-container .box{
+   text-align: center;
+}
+
+.team .box-container .box img{
+   width: 100%;
+   object-fit: cover;
+   margin-bottom: .5rem;
+}
+
+.team .box-container .box h3{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.contact .row{
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap:2rem;
+}
+
+.contact .row .image{
+   flex:1 1 50rem;
+}
+
+.contact .row .image img{
+   width: 100%;
+}
+
+.contact .row form{
+   flex:1 1 30rem;
+   border:var(--border);
+   padding:2rem;
+   text-align: center;
+}
+
+.contact .row form h3{
+   font-size: 2.5rem;
+   margin-bottom: 1rem;
+   color:var(--black);
+}
+
+.contact .row form .box{
+   width: 100%;
+   padding:1.4rem;
+   font-size: 1.8rem;
+   color:var(--black);
+   border:var(--border);
+   margin:1rem 0;
+}
+
+.footer .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+   gap:1.5rem;
+   align-items: flex-start;
+}
+
+.footer .box-container .box{
+   text-align: center;
+}
+
+.footer .box-container .box i{
+   font-size: 2.5rem;
+   line-height: 6rem;
+   height: 6rem;
+   width: 6rem;
+   border-radius: 50%;
+   background-color: var(--main-color);
+   color:var(--white);
+   margin-bottom: 1rem;
+}
+
+.footer .box-container .box h3{
+   margin:1rem 0;
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.footer .box-container .box p{
+   line-height: 2;
+   font-size: 1.6rem;
+   color:var(--light-color);
+}
+
+.footer .credit{
+   text-align: center;
+   margin-top: 3rem;
+   padding-top: 2.5rem;
+   border-top: var(--border);
+   font-size: 2rem;
+   color:var(--black);
+   /* padding-bottom: 7rem; */
+}
+
+.footer .credit span{
+   color:var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+   html{
+      font-size: 55%;
+   }
+
+}
+
+@media (max-width:768px){
+
+   #menu-btn{
+      display: inline-block;
+      transition: .2s linear;
+   }
+
+   #menu-btn.fa-times{
+      transform: rotate(180deg);
+   }
+
+   .header .flex .navbar{
+      position: absolute;
+      top:99%; left:0; right:0;
+      background-color: var(--white);
+      border-top: var(--border);
+      border-bottom: var(--border);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      transition: .2s linear;
+   }
+
+   .header .flex .navbar.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+   }
+
+   .header .flex .navbar a{
+      display: block;
+      margin:2rem;
+   }
+
+   .home-bg{
+      background-position: left;
+   }
+
+   .home-bg .home{
+      justify-content: center;
+   }
+
+   .home-bg .home .content h3{
+      font-size: 4rem;
+   }
+
+   .about .content h3{
+      font-size: 3rem;
+   }
+
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%;
+   }
+
+   .heading img{
+      height: 3rem;
+   }
+
+   .heading h3{
+      font-size: 3rem;
+   }
+
+}
+</style>
+
+
+</head>
+<body>
+       
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="#home" class="logo"><img src="images/resume.png" alt=""></a>
+
+      <nav class="navbar">
+         <a href="#home">home</a>
+         <a href="#about">Features</a>
+         <a href="#menu">How it Works</a>
+         <a href="#gallery">Sample</a>
+         <a href="#contact">contact</a>
+         <a href="/logout" role="button" class="btn btn-outline-light btn-primary" style="text-decoration: none; "><i class="fa-solid fa-user"> <span>Log Out</span> </i></a>
+
+      </nav>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+   </section>
+
+</header>
+
+<!-- header section ends -->
+
+
+<!-- home section starts  -->
+
+<div class="home-bg">
+
+   <section class="home" id="home">
+
+      <div class="content">
+         <h3>Resume Generator</h3>
+         <p>Create a professional resume for free</p>
+         <a href="#profession" class="btn">Create Resume</a>
+      </div>
+
+   </section>
+
+</div>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+   <div class="image">
+      <img src="images/home-img-removebg-preview.png" alt="">
+   </div>
+<div class="content">
+   <div class="heading">
+      <h3>Our Features</h3>
+   </div>
+            <p>
+               Option to choose between different working professions.
+            </p>
+            <p>
+               Provides instant resume to individuals.
+            </p>
+            <p>
+               different choices available for resume templates.
+            </p>
+
+   </div>
+</div>
+</section>
+
+<!-- about section ends -->
+
+<!-- facility section starts  -->
+
+<section class="profession" id="profession">
+<hr>
+<br>
+<br>
+   <div class="heading">
+      <h3>Choose Your Profession</h3>
+      <br>
+      <br>
+   </div>
+
+   <div class="box-container">
+
+      <div class="box">
+         <img src="images/engineer.png"  alt="">
+         <h3>Engineer</h3>
+         <a href="personal" style="border-radius: 100px;" class="btn">Select</a>
+      </div>
+
+      <div class="box">
+         <img src="images/pilot.png" alt="">
+         <h3>Pilot</h3>
+         <a href="personal" style="border-radius: 100px;" class="btn">Select</a>
+      </div>
+
+      <div class="box">
+         <img src="images/teacher.png" alt="">
+         <h3>Teacher</h3>
+         <a href="personal" style="border-radius: 100px;" class="btn">Select</a>
+      </div>
+
+      <div class="box">
+         <img src="images/doctor.png" alt="">
+         <h3>Doctor</h3>
+         <a href="personal" style="border-radius: 100px;" class="btn">Select</a>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- facility section ends -->
+
+<!-- menu section starts  -->
+
+<section class="menu" id="menu">
+
+   <div class="heading">
+      <h3>How it Works</h3>
+      <br>
+      
+   </div>
+
+   <div class="box-container">
+
+      <div class="box">
+         <img src="images/register.png" width="40%" height="40%" alt="">
+         <h1>Step 1.Register</h1>
+         <h3>Create an account using email</h3>
+      </div>
+
+      <div class="box">
+         <img src="images/personal.png" width="40%" height="40%" alt="">
+         <h1>Step 2. Complete Info</h1>
+         <h3>Fill out your complete information</h3>
+      </div>
+
+      <div class="box">
+         <img src="images/cv.png" width="40%" height="40%" alt="">
+         <h1>Step 3. Select Template</h1>
+         <h3>Select Resume Template</h3>
+      </div>
+      <div class="box">
+         <img src="images/download.png" width="40%" height="40%" alt="">
+         <h1>Step 4. Download</h1>
+         <h3>Download or Print for a job application</h3>
+      </div>
+      
+      </div>
+
+      
+   </div>
+
+</section>
+
+<!-- menu section ends -->
+
+<!-- gallery section starts  -->
+
+<!-- <section class="gallery" id="gallery">
+
+   <div class="heading">
+      <img src="images/heading-img.png" alt="">
+      <h3>our gallery</h3>
+   </div>
+
+   <div class="box-container">
+      <img src="images/gallery-1.webp" alt="">
+      <img src="images/gallery-2.webp" alt="">
+      <img src="images/gallery-3.webp" alt="">
+      <img src="images/gallery-4.webp" alt="">
+      <img src="images/gallery-5.webp" alt="">
+      <img src="images/gallery-6.webp" alt="">
+   </div>
+
+</section> -->
+
+<!-- gallery section ends -->
+
+<!-- team section starts  -->
+
+
+<!-- team section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+   <div class="heading">
+      <img src="images/heading-img.png" alt="">
+      <h3>contact us</h3>
+   </div>
+
+   <div class="row">
+
+      <div class="image">
+         <img src="images/contact-img.svg" alt="">
+      </div>
+
+      <form action="https://formsubmit.co/el/jiluco" method="POST">
+         <h3>Contact Us</h3>
+         <input type="text" name="name" required class="box" maxlength="20" placeholder="enter your name">
+         <input type="email" name="email" required class="box" maxlength="20" placeholder="enter your email" min="0" max="9999999999" onkeypress="if(this.value.length == 10) return false">
+         <textarea placeholder="Message"  name="message" id="message" required class="box" cols="10" rows="5"></textarea>
+         <button type="submit" name="send" value="send message" class="btn">Send Message</button>
+      </form>
+
+   </div>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+
+
+   <div class="credit"> &copy; copyright @ 2023 <span>resume Generator</span> </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script > 
+let menu = document.querySelector('#menu-btn');
+let navbar = document.querySelector('.header .flex .navbar');
+
+menu.onclick = () =>{
+   menu.classList.toggle('fa-times');
+   navbar.classList.toggle('active');
+}
+
+window.onscroll = () =>{
+   menu.classList.remove('fa-times');
+   navbar.classList.remove('active');
+}
+</script>
+</body>
+</html>

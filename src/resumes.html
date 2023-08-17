@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icons8-cv-16.png" type='images/x-icon'>
+    <title>RESUME GENERATOR</title>
+    <style>
+
+   
+    .grid {
+    flex: 1 1 auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 15vmax;
+    padding: 20px;
+    margin: auto;
+  }
+  
+  .grid-item {
+    padding: 20px;
+    background: #3d3c46;
+    height: 500px;
+    width: 400px;
+  }
+  .template1 {
+    background-image: url("images/template1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .template2 {
+    background-image: url("images/template2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .template3 {
+    background-image: url("images/template3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .template4 {
+    background-image: url("images/template4s.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 300px;
+    margin-bottom: 40px;
+  }
+  .btnn {
+    position: relative;
+    top: 440px;
+    transition-duration: 0.4s;
+    color: gray;
+  }
+
+.btnn:hover {
+  /* background-color: gray; */
+  color: lightblue;
+  margin: 10px;
+  border-radius: 10px;
+
+}
+
+
+    </style>
+</head>
+<body>
+  <nav class="bg-gray-800">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <img class="block h-8 w-auto lg:hidden" src="images/resume.png" alt="Your Company">
+            <img class="hidden h-8 w-auto lg:block" src="images/resume.png" alt="Your Company">
+          </div>
+          <div class="">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="work" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Resume Templates</a>
+  
+              <a href="home" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+  
+          <!-- Profile dropdown -->
+
+        </div>
+      </div>
+    </div>
+  
+    
+  </nav>
+  <section>
+      
+    <div class="grid">
+      <div class="grid-item template1" type="">
+        <a href="template1">
+         <div class="skeleton">
+         </div>
+         <div style="width: 40px" class="skeleton">
+          <a href="template1" class="btnn btn btn-primary">Select</a>
+        <!-- <img src="images/template1.png" alt="" srcset=""> -->
+         </div>
+        </a>
+      </div>
+      <div class="grid-item template2">
+        <div class="skeleton"></div>
+        <div style="width: 40px" class="skeleton">
+          <a href="template2" class="btnn btn btn-primary">Select</a>
+        </div>
+      </div>
+      <div class="grid-item template3">
+        <div class="skeleton"></div>
+        <div style="width: 40px" class="skeleton">
+          <a href="template3" class="btnn btn btn-primary">Select</a>
+       </div>
+      </div>
+      <div class="grid-item template4">
+        <div class="skeleton"></div>
+        <div style="width: 40px" class="skeleton">
+          <a href="template4" class="btnn btn btn-primary">Select</a>
+       </div>
+      </div>
+      
+    
+
+    </div>
+  </section>
+      <script src="https://cdn.tailwindcss.com"></script>
+
+</body>
+</html>

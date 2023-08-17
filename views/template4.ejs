@@ -1,0 +1,399 @@
+<link rel="icon" href="images/icons8-cv-16.png" type='images/x-icon'>
+      <title>RESUME GENERATOR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Import Font Icon -->
+    <link rel="stylesheet" href="assets/ap/style.css">
+
+<style>
+    * {
+box-sizing: border-box;
+padding: 0px;
+margin: 0px; }
+
+/* 2480 x 3508 */
+
+.uni{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  background-color: azure;
+}
+
+.container {
+/* max-width: 2480px;
+min-height: 3508px; */
+/* background-color: azure; */
+max-width: 1000px;
+min-width: 1000px;
+
+}    
+
+body, html {
+color: #666;
+font-size: 16px;
+font-family: Poppins, sans-serif; }
+
+.cv-main-wrapper {
+display: flex;
+background-color: white; }
+
+.cv-main-content {
+padding: 1.5rem;
+flex: 1; }
+.cv-main-content .user-top {
+margin-bottom: 3rem;
+display: flex; }
+.cv-main-content .user-top .avatar img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover; }
+.cv-main-content .user-top .userinfo {
+  flex: 1;
+  margin-left: 2rem; }
+.cv-main-content .user-top .top {
+  margin-bottom: 1rem;
+  text-transform: uppercase; }
+  .cv-main-content .user-top .top .name {
+    font-size: 2rem; }
+  .cv-main-content .user-top .top .featured {
+    font-weight: 700;
+    color: #42489E; }
+.cv-main-content .user-top .li {
+  margin-bottom: 0.5rem; }
+  .cv-main-content .user-top .li .icon {
+    margin-right: 0.25rem; }
+.cv-main-content .main-title {
+margin-left: 60px; }
+.cv-main-content .main-title .icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 2.5rem;
+  background-color: #42489E;
+  color: #fff;
+  margin-right: 1rem; }
+.cv-main-content .work-item {
+display: flex;
+margin-bottom: 2rem; }
+.cv-main-content .work-item .date {
+  width: 60px; }
+.cv-main-content .work-item .content {
+  flex: 1;
+  margin-left: 1rem;
+  position: relative;
+  padding-left: 30px; }
+  .cv-main-content .work-item .content .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    background-color: #42489E; }
+    .cv-main-content .work-item .content .dot:before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      left: -4px;
+      bottom: -4px;
+      background-color: #EAE7E7;
+      border-radius: 50%;
+      z-index: -1; }
+.cv-main-content .work-item .name {
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.25rem; }
+.cv-main-content .work-item .company {
+  margin-bottom: 1rem;
+  color: #9B9B9B; }
+
+.main-title {
+font-size: 1.5rem;
+color: #42489E;
+margin-bottom: 1.5rem;
+font-weight: bold; }
+
+.box {
+margin-bottom: 3rem; }
+
+.cv-main-sidebar {
+width: 400px;
+background: linear-gradient(180deg, #2A68A0 0%, #43479E 100%);
+color: #fff;
+padding: 2rem; }
+.cv-main-sidebar .main-title {
+color: #fff; }
+.cv-main-sidebar .quote {
+font-size: 3rem;
+margin-bottom: 0.5rem; }
+.cv-main-sidebar .list-skills {
+border-left: 1px solid #BBB5DB; }
+.cv-main-sidebar .list-skills .item {
+  margin-bottom: 1rem; }
+  .cv-main-sidebar .list-skills .item:last-child {
+    margin-bottom: 0px; }
+.cv-main-sidebar .list-skills .name {
+  padding-left: 1rem;
+  margin-bottom: 0.25rem; }
+.cv-main-sidebar .list-skills .progress {
+  position: relative;
+  height: 0.75rem;
+  background-color: #877DBA; }
+  .cv-main-sidebar .list-skills .progress .bar {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #BBB5DB; }
+.cv-main-sidebar .list-personal-skill .item {
+margin-bottom: 1rem; }
+.cv-main-sidebar .list-personal-skill .item:last-child {
+  margin-bottom: 0px; }
+.cv-main-sidebar .list-personal-skill .name {
+margin-bottom: 0.5rem;
+display: block; }
+.cv-main-sidebar .list-personal-skill .rate .dot {
+width: 0.75rem;
+height: 0.75rem;
+margin-right: 5px;
+display: inline-block;
+border-radius: 50%;
+background-color: rgba(255, 255, 255, 0.5); }
+.cv-main-sidebar .list-personal-skill .rate .dot.active {
+  background-color: #fff; }
+.cv-main-sidebar .list-social a {
+display: flex;
+padding: 0.5rem;
+margin-bottom: 0.75rem;
+color: #fff;
+text-decoration: none;
+align-items: center; }
+.cv-main-sidebar .list-social a:hover {
+  text-decoration: underline; }
+.cv-main-sidebar .list-social .icon {
+font-size: 1.25rem;
+width: 2rem; }
+.cv-main-sidebar .work-item {
+display: flex;
+margin-bottom: 2rem; }
+.cv-main-sidebar .work-item .date {
+  width: 60px; }
+.cv-main-sidebar .work-item .content {
+  flex: 1;
+  margin-left: 1rem;
+  position: relative;
+  padding-left: 30px; }
+  .cv-main-sidebar .work-item .content .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    background-color: #42489E; }
+    .cv-main-sidebar .work-item .content .dot:before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      left: -4px;
+      bottom: -4px;
+      background-color: #EAE7E7;
+      border-radius: 50%;
+      z-index: -1; }
+.cv-main-sidebar .work-item .name {
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.25rem; }
+.cv-main-sidebar .work-item .company {
+  margin-bottom: 1rem;
+  color: #9B9B9B; }
+
+@media (min-width: 1366px) {
+body, html {
+font-size: 18px; } }
+
+@media (max-width: 768px) {
+body, html {
+font-size: 14px; }
+.cv-main-wrapper {
+display: block; }
+.cv-main-wrapper .main-title {
+  margin-left: 0px; }
+.cv-main-sidebar {
+width: 100%; } }
+</style>
+<div class="uni">
+<div class="container">    
+    <div class="cv-main-wrapper">
+        <div class="cv-main-content">
+            <div class="user-top">
+                <div class="avatar">
+                    <img src="images/avatar.png" alt="">
+                </div>
+                <div class="userinfo">
+                    <div class="top">
+                        <div class="name">
+                            <span class="featured"><%= foundUser.formData.name %></span>
+                        </div>
+                        <div class="post"><%= foundUser.formData.designation %></div>
+                    </div>
+                    <div class="info">
+                        <div class="li">
+                            <span class="-ap icon-phone5 icon"></span>
+                            <%= foundUser.formData.contact %>
+                        </div>
+                        <div class="li">
+                            <span class="-ap  icon-mail icon"></span>
+                            <%= foundUser.formData.email %>
+                        </div>
+                        <div class="li">
+                            <span class="-ap icon-briefcase2 icon"></span>
+                            <%=foundUser.formData.linkedin %>
+                        </div>
+                        <div class="li">
+                            <span class="-ap icon-place icon"></span>
+                            <%= foundUser.formData.address %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="main-title">
+                    <span class="icon -ap icon-briefcase2"></span>
+                    WORK EXPERIENCE
+                </div>
+                <div class="work-item">
+
+                    <div class="date"><%= foundUser.workexp.fduration %></div>
+                    <div class="content">
+                        <div class="dot"></div>
+                        <div class="name"><%= foundUser.workexp.fcompany %></div>
+                        <div class="company"><%= foundUser.workexp.fdesignation %></div>
+                        <div class="desc">
+                      <%= foundUser.workexp.fdescription %>    
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="date"><%= foundUser.workexp.duration2 %></div>
+                    <div class="content">
+                        <div class="dot"></div>
+                        <div class="name"><%= foundUser.workexp.company2 %></div>
+                        <div class="company"><%= foundUser.workexp.designation2 %></div>
+                        <div class="desc">
+                            <%= foundUser.workexp.description2 %> 
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="date"><%= foundUser.workexp.duration3 %></div>
+                    <div class="content">
+                        <div class="dot"></div>
+                        <div class="name"><%= foundUser.workexp.company3 %></div>
+                        <div class="company"><%= foundUser.workexp.designation3 %></div>
+                        <div class="desc"><%= foundUser.workexp.description3 %></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="main-title">
+                    <span class="icon -ap icon-school"></span>
+                    Project
+                </div>
+                <div class="work-item">
+                    <div class="date"><%= foundUser.projectinfo.projectduration1 %></div>
+                    <div class="content">
+                        <div class="dot"></div>
+                        <div class="name"><%= foundUser.projectinfo.project1 %></div>
+                        <!-- <div class="company">Bethany Services, Grand Rapids, MI</div> -->
+                        <div class="desc"><%= foundUser.projectinfo.projectdescription1 %></div>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="date"><%= foundUser.projectinfo.projectduration2 %></div>
+                    <div class="content">
+                        <div class="dot"></div>
+                        <div class="name"><%= foundUser.projectinfo.project2 %></div>
+                        <!-- <div class="company">Bethany Services, Grand Rapids, MI</div> -->
+                        <div class="desc"><%= foundUser.projectinfo.projectdescription2 %></div>
+                    </div>
+                </div>
+                <!-- <div class="work-item">
+                    <div class="date">2015</div>
+                    <div class="content">
+                        <div class="dot"></div>
+                        <div class="name">A.S . IN BUSINESS MANAGEMENT</div>
+                        <div class="company">Bethany Services, Grand Rapids, MI</div>
+                        <div class="desc"></div>
+                    </div>
+                </div> -->
+            </div>
+            <!-- <div class="box">
+                <div class="main-title">
+                    <span class="icon -ap icon-style"></span>
+                    HOBBIES AND INTERESTS
+                </div>
+                <div class="work-item">
+                    <div class="date"></div>
+                    <div class="content">
+                        <div class="desc">Socialising with firends and family, watching TV (BBC Clic, news and documentaries), playing football on a weekly basis,
+                        reading non-fiction books, solving puzzles, fishing on the regular basis and computing (creating and desiging software
+                        and website).</div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="cv-main-sidebar">
+            <div class="box">
+                <div class="desc" style="font-size: 14px">
+                <%= foundUser.formData.introduction %>
+                </div>
+            </div>
+            <div class="box">
+                <div class="main-title">
+                    <span class="icon -ap icon-school"></span>
+                    EDUCATION
+                </div>
+                <div class="work-item">
+                    <div class="date"><%= foundUser.edudata.gduration %></div>
+                    <div class="content">
+                        <div class="dot"></div>
+                        <div class="name"><%= foundUser.edudata.gcollege %></div>
+                        <div class="company"><%= foundUser.edudata.glocation %></div>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="date"><%= foundUser.edudata.twduration %></div>
+                    <div class="content">
+                        <div class="dot"></div>
+                        <div class="name"><%= foundUser.edudata.twcollege %></div>
+                        <div class="company"><%= foundUser.edudata.twlocation %></div>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="date"><%= foundUser.edudata.teduration %></div>
+                    <div class="content">
+                        <div class="dot"></div>
+                        <div class="name"><%= foundUser.edudata.tecollege %></div>
+                        <div class="company"><%= foundUser.edudata.telocation %></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="main-title">PRO SKILLS</div>
+
+                <div class="list-skills">
+                <%= foundUser.projectinfo.skillsdescription %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
